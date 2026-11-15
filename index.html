@@ -7,6 +7,15 @@
   <meta name="description" content="Weekly one-on-one coaching for founders and leaders who want teams that take ownership and move things forward without everything coming back to them. Start with a free 45-minute conversation.">
   <link rel="canonical" href="https://vineethkattakudy.in/work-with-vineeth/">
   <meta name="theme-color" content="#09090a">
+  <script>
+    // Apply the visitor's saved theme before first paint to avoid a flash of the wrong theme.
+    try {
+      if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.dataset.theme = 'light'
+        document.querySelector('meta[name="theme-color"]').content = '#f6f1e9'
+      }
+    } catch (e) {}
+  </script>
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Build a team that doesn't wait for you — Vineeth Kattakudy">

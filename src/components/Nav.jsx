@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { nav } from '../content.js'
 import WhatsAppLink, { WhatsAppIcon } from './WhatsAppLink.jsx'
+import ThemeToggle from './ThemeToggle.jsx'
 
 export function Brand() {
   return (
@@ -56,15 +57,18 @@ export default function Nav() {
             <WhatsAppIcon width="17" height="17" /> Book a free conversation
           </WhatsAppLink>
         </nav>
-        <button
-          className="nav__toggle"
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-          aria-controls="nav-links"
-          onClick={() => setOpen((o) => !o)}
-        >
-          <span /><span />
-        </button>
+        <div className="nav__actions">
+          <ThemeToggle />
+          <button
+            className="nav__toggle"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            aria-controls="nav-links"
+            onClick={() => setOpen((o) => !o)}
+          >
+            <span /><span />
+          </button>
+        </div>
       </div>
     </header>
   )
